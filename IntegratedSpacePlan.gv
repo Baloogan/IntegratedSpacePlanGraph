@@ -1,22 +1,41 @@
 digraph GRAPH_0 {
-"Space Shuttle Program" -> "International Space Station Project"
-"Space Shuttle Program" -> "RMS (International)"
-"Space Shuttle Program" -> "IUS"
-"Space Shuttle Program" -> "EMU"
-"EMU" -> "MMU"
 
-"Space Shuttle Program" -> "MMU"
-"Space Shuttle Program" -> "Satellite Retrieval and Servicing"
+{ node [shape=plaintext, fontsize=16];
+  /* the time-line graph */
+  1983 -> 1988 -> 1993 -> 1998 -> 2003 -> 2008 -> 2013 -> 2018 -> 2023 -> 2028 -> 2033 -> 2038 -> 2043 -> 2050 -> 2100 
+}
+
+{ rank = same; 1983; "EMU"; "Private Launch Vehicles (ELV's)"}
+
+"American Space Shuttle Program (NSTS)" -> "US / International Space Station Project"
+"American Space Shuttle Program (NSTS)" -> "RMS (International)"
+"American Space Shuttle Program (NSTS)" -> "IUS"
+"American Space Shuttle Program (NSTS)" -> "EMU"
+"EMU" -> "MMU"
+"International Expendable Launch Vehicle Fleet" -> "Private Launch Vehicles (ELV's)"
+
+{ rank = same; 1988; "Satellite Refueling Capability" }
+"American Space Shuttle Program (NSTS)" -> "MMU"
+"American Space Shuttle Program (NSTS)" -> "Satellite Retrieval and Servicing"
 "EMU" -> "Satellite Retrieval and Servicing"
 "RMS (International)" -> "Satellite Retrieval and Servicing"
 "MMU" -> "Satellite Retrieval and Servicing"
 "Satellite Retrieval and Servicing" ->"Satellite Refueling Capability"
-"Space Shuttle Program" -> "Satellite Refueling Capability"
+"American Space Shuttle Program (NSTS)" -> "Satellite Refueling Capability"
 "EMU" -> "Satellite Refueling Capability"
 "MMU" -> "Satellite Refueling Capability"
-"International Space Station Project" -> "Lunar Orbit Staging / Facility"
-"Lunar Orbit Staging / Facility" -> "Return-to-Moon"
-"Return-to-Moon" -> "Lunar Outpost Established"
 
+{ rank = same; 1998; "US / International Space Station Project"}
+"US / International Space Station Project" -> "Lunar Orbit Staging / Facility"
+"Lunar Orbit Staging / Facility" -> "Return-to-Moon"
+{ rank = same; 2008; "Lunar Outpost Established"}
+"Return-to-Moon" -> "Lunar Outpost Established" -> "International Lunar Base" -> "LEO International Spaceport" -> "Moonport" -> "Self-Supporting Lunar Base" -> "Phobos Outpost Established" -> "Mars Landing - Human Outpost Established" -> "Phobos / Deimos Mining Operations Commence" -> "Initial Mars Base Establishd" -> "Martian Spaceport" -> "Operational Mars Base" -> "Self-Supporting Mars Base" -> "Initiate Martian Terraforming Operations"
+
+{ rank = same; 2013; "LEO International Spaceport" }
+{ rank = same; 2018; "Self-Supporting Lunar Base" }
+{ rank = same; 2023; "Phobos / Deimos Mining Operations Commence" }
+{ rank = same; 2028; "Martian Spaceport" }
+{ rank = same; 2038; "Self-Supporting Mars Base" }
+{ rank = same; 2043; "Initiate Martian Terraforming Operations" }
 
 }
