@@ -7,53 +7,96 @@ digraph GRAPH_0 {
 
 { rank = same; 1983; "EMU"; "Private Launch Vehicles (ELV's)"}
 
-"American Space Shuttle Program (NSTS)" -> "US / International Space Station Project"
-"American Space Shuttle Program (NSTS)" -> "RMS (International)"
-"American Space Shuttle Program (NSTS)" -> "IUS"
-"American Space Shuttle Program (NSTS)" -> "EMU"
-"EMU" -> "MMU"
-"International Expendable Launch Vehicle Fleet" -> "Private Launch Vehicles (ELV's)"
-"Private Launch Vehicles (ELV's)"-> "Government - Commercial Satellite Deployment"
-"American Space Shuttle Program (NSTS)" -> "Government - Commercial Satellite Deployment"
-"International Expendable Launch Vehicle Fleet" -> "Government - Commercial Satellite Deployment"
-"American Space Shuttle Program (NSTS)" -> "Defense Satellites"
-"Private Launch Vehicles (ELV's)"-> "Defense Satellites"
-"International Expendable Launch Vehicle Fleet" -> "Defense Satellites"
-"International Expendable Launch Vehicle Fleet" -> "Planetary / Scientific Missions"
-"American Space Shuttle Program (NSTS)" -> "Planetary / Scientific Missions"
-"American Space Shuttle Program (NSTS)" -> "Spacelab (International)"
-"International Expendable Launch Vehicle Fleet" -> "Spacelab (International)"
-"International Expendable Launch Vehicle Fleet" -> "GPS Constellation"
+"American Space Shuttle Program (NSTS)" -> 
+{
+"US / International Space Station Project" 
+"RMS (International)" 
+"IUS" 
+"EMU" 
+"Defense Satellites"
+"Government - Commercial Satellite Deployment"
+"Planetary / Scientific Missions"
+"Spacelab (International)"
+"MMU"
+"Satellite Retrieval and Servicing"
+"TDRS Constellation" 
+"Satellite Refueling Capability"
+"Solar Max / Space Telescope Mission Types"
+"Spacehab"
+"CDSF"
+"Evolvable OMV" 
+"Evolvable OTV"
+"EDO"
+"Suborbital ET Applications"
+"LEO External Tank Resource Base / Momentum Reservoir"
+"Tethered Systems / TSS"
+"Mission to Planet Earth - Element & Data Integration"
+
+"AXAF"
+"SIRTF"
+"CIT"
+
+}
+
+
+"Evolvable OMV"->"MOMV" 
+"Evolvable OTV"->"FTS"
+"Mission to Planet Earth - Element & Data Integration"->"US / International Space Station Project"
+"Suborbital ET Applications"->"ET / ACC"
+"LEO External Tank Resource Base / Momentum Reservoir"->"Waste Dump"
+
+
+"EMU" -> 
+{
+"MMU"
+"Satellite Retrieval and Servicing"
+"Satellite Refueling Capability"
+}
+
+"MMU" ->
+{
+"Satellite Retrieval and Servicing"
+"Satellite Refueling Capability"
+}
+
+"International Expendable Launch Vehicle Fleet" -> 
+{
+"Private Launch Vehicles (ELV's)"
+"Government - Commercial Satellite Deployment"
+"Defense Satellites"
+"Planetary / Scientific Missions"
+"Spacelab (International)"
+"GPS Constellation"
+}
+
+"Private Launch Vehicles (ELV's)"-> 
+{
+"Government - Commercial Satellite Deployment"
+"Defense Satellites"
+}
+
 
 { rank = same; 1988; "Satellite Refueling Capability" }
-"American Space Shuttle Program (NSTS)" -> "MMU"
-"American Space Shuttle Program (NSTS)" -> "Satellite Retrieval and Servicing"
-"EMU" -> "Satellite Retrieval and Servicing"
-"RMS (International)" -> "Satellite Retrieval and Servicing"
-"RMS (International)" -> "Satellite Refueling Capability"
-"MMU" -> "Satellite Retrieval and Servicing"
-"Satellite Retrieval and Servicing" ->"Satellite Refueling Capability"
-"American Space Shuttle Program (NSTS)" -> "Satellite Refueling Capability"
-"American Space Shuttle Program (NSTS)" -> "TDRS Constellation"
-"Satellite Retrieval and Servicing"-> "Solar Max / Space Telescope Mission Types"
-"American Space Shuttle Program (NSTS)" -> "Solar Max / Space Telescope Mission Types"
+
+
+"RMS (International)" -> 
+{
+"Satellite Retrieval and Servicing"
+"Satellite Refueling Capability"
+}
+
+
+"Satellite Retrieval and Servicing" ->
+{
+"Satellite Refueling Capability"
+"Solar Max / Space Telescope Mission Types"
+}
+
 "RMS (International)" -> "Solar Max / Space Telescope Mission Types"
 "IUS" -> "TDRS Constellation"
-"EMU" -> "Satellite Refueling Capability"
-"MMU" -> "Satellite Refueling Capability"
-
-"American Space Shuttle Program (NSTS)" -> "Spacehab"
-"American Space Shuttle Program (NSTS)" -> "CDSF"
-"American Space Shuttle Program (NSTS)" -> "Evolvable OMV"->"MOMV"
-"American Space Shuttle Program (NSTS)" -> "Evolvable OTV"->"FTS"
- "Evolvable OMV"->"FTS"
-
-"American Space Shuttle Program (NSTS)" -> "EDO"
-"American Space Shuttle Program (NSTS)" -> "Suborbital ET Applications"->"ET / ACC"
-"American Space Shuttle Program (NSTS)" -> "LEO External Tank Resource Base / Momentum Reservoir"->"Waste Dump"
 "US / International Space Station Project"->"Waste Dump"
 "Waste Dump"->"US / International Space Station Project"
-
+"Evolvable OMV"->"FTS"
 "Spacelab (International)"->"EDO"->"CDSF"
 
 "TDRS Constellation" -> "US / International Space Station Project"
@@ -69,16 +112,11 @@ digraph GRAPH_0 {
 "Evolvable OMV"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
 "ET / ACC"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
 
-"American Space Shuttle Program (NSTS)" -> "Tethered Systems / TSS"
-"American Space Shuttle Program (NSTS)" -> "Mission to Planet Earth - Element & Data Integration"->"US / International Space Station Project"
 "US / International Space Station Project"->"Coorbiting Low Inclination Platforms"
 "Coorbiting Low Inclination Platforms"->"US / International Space Station Project"
 "Mission to Planet Earth - Element & Data Integration"->"Coorbiting Low Inclination Platforms"
 "Coorbiting Low Inclination Platforms"->"Mission to Planet Earth - Element & Data Integration"
 
-"American Space Shuttle Program (NSTS)" ->"AXAF"
-"American Space Shuttle Program (NSTS)" ->"SIRTF"
-"American Space Shuttle Program (NSTS)" ->"CIT"
 
 { rank = same; 1998; "US / International Space Station Project"}
 "US / International Space Station Project" -> "Lunar Orbit Staging / Facility"
