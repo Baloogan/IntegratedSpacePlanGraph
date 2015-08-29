@@ -91,6 +91,7 @@ node [shape="box"];
 "Spacelab (International)"
 "MMU"
 "Satellite Retrieval and Servicing"
+"ET / ACC"
 "TDRS Constellation" 
 "Satellite Refueling Capability"
 "Solar Max / Space Telescope Mission Types"
@@ -115,7 +116,11 @@ node [shape="box"];
 "Evolvable OMV"->"MOMV" 
 "Evolvable OTV"->"FTS"
 "Mission to Planet Earth - Element & Data Integration"->"US / International Space Station Project"
-"Suborbital ET Applications"->"ET / ACC"
+"Suborbital ET Applications"->
+{
+"ET / ACC"
+"LEO External Tank Resource Base / Momentum Reservoir"
+}
 "LEO External Tank Resource Base / Momentum Reservoir"->"Waste Dump"
 
 
@@ -147,7 +152,6 @@ node [shape="box"];
 "Government - Commercial Satellite Deployment"
 "Defense Satellites"
 "Planetary / Scientific Missions"
-"Spacelab (International)"
 "GPS Constellation"
 "Voyager II Uranus Encounter"
 }
@@ -224,19 +228,32 @@ node [shape="box"];
 }
 
 "Mission to Planet Earth - Element & Data Integration"->"US / International Space Station Project"
-"Suborbital ET Applications"->"ET / ACC"
 "LEO External Tank Resource Base / Momentum Reservoir"->"Waste Dump"
 
 
 "TDRS Constellation" -> "US / International Space Station Project"
 "EDO" -> "US / International Space Station Project"
-"CDSF" -> "US / International Space Station Project"
-"Spacehab" -> "US / International Space Station Project"
+"CDSF" -> 
+{
+"US / International Space Station Project"
+"LEO Quarantine"
+}
+"Spacehab" -> 
+{
+"US / International Space Station Project"
+"LEO Quarantine"
+"Manned Space Transfer Vehicle"
+"MOMV"
+}
 
 
 "MOMV"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
 "FTS"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
-"ET / ACC"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
+"ET / ACC"->
+{
+"Space Harboring / Servicing / Tending & LEO Propellant Depot"
+"Commercial and Defense Sat Launches"
+}
 
 
 "Coorbiting Low Inclination Platforms"->"US / International Space Station Project"
