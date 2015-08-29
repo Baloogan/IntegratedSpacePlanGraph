@@ -10,7 +10,75 @@ node [shape="box"];
 
 { rank = same; 1983; "EMU"; "Private Launch Vehicles (ELV's)"}
 
+
+/* Critical Path */
+
 "American Space Shuttle Program (NSTS)" [penwidth=3,shape="doubleoctagon"]
+"American Space Shuttle Program (NSTS)"->"US / International Space Station Project" [penwidth=3, weight=100]
+"US / International Space Station Project" [penwidth=3, shape="doubleoctagon"]
+"US / International Space Station Project" ->"Lunar Orbit Staging / Facility" [penwidth=3, weight=100]
+"Lunar Orbit Staging / Facility" [penwidth=3,shape="doubleoctagon"]
+"Lunar Orbit Staging / Facility" -> "Return-to-Moon"  [penwidth=3, weight=100]
+"Return-to-Moon" [penwidth=3, shape="doubleoctagon"]
+"Return-to-Moon" -> "Lunar Outpost Established"  [penwidth=3, weight=100]
+"Lunar Outpost Established" [penwidth=3, shape="doubleoctagon"]
+"Lunar Outpost Established" -> "International Lunar Base"  [penwidth=3, weight=100]
+"International Lunar Base" [penwidth=3, shape="doubleoctagon"]
+"International Lunar Base" -> "LEO International Spaceport" [penwidth=3, weight=100]
+ "LEO International Spaceport" [penwidth=3, shape="doubleoctagon"]
+"LEO International Spaceport" ->  "Moonport"  [penwidth=3, weight=100]
+"Moonport" [penwidth=3, shape="doubleoctagon"]
+"Moonport" -> "Self-Supporting Lunar Base"  [penwidth=3, weight=100]
+"Self-Supporting Lunar Base" [penwidth=3, shape="doubleoctagon"]
+"Self-Supporting Lunar Base" -> "Phobos Outpost Established"  [penwidth=3, weight=100]
+"Phobos Outpost Established" [penwidth=3, shape="doubleoctagon"]
+"Phobos Outpost Established" -> "Mars Landing - Human Outpost Established" [penwidth=3, weight=100]
+"Mars Landing - Human Outpost Established"  [penwidth=3, shape="doubleoctagon"]
+"Mars Landing - Human Outpost Established" -> "Phobos / Deimos Mining Operations Commence"  [penwidth=3, weight=100]
+"Phobos / Deimos Mining Operations Commence" [penwidth=3, shape="doubleoctagon"]
+"Phobos / Deimos Mining Operations Commence"-> "Initial Mars Base Established" [penwidth=3, weight=100] 
+"Initial Mars Base Established" [penwidth=3, shape="doubleoctagon"]
+"Initial Mars Base Established"-> "Martian Spaceport"  [penwidth=3, weight=100]
+"Martian Spaceport" [penwidth=3, shape="doubleoctagon"]
+"Martian Spaceport"-> "Operational Mars Base"  [penwidth=3, weight=100]
+"Operational Mars Base" [penwidth=3, shape="doubleoctagon"]
+"Operational Mars Base"-> "Self-Supporting Mars Base"  [penwidth=3, weight=100]
+
+"Self-Supporting Mars Base" [penwidth=3, shape="doubleoctagon"]
+"Self-Supporting Mars Base"-> "Initiate Martian Terraforming Operations"  [penwidth=3, weight=100]
+"Initiate Martian Terraforming Operations"
+"Initiate Martian Terraforming Operations"-> "Large Scale Human Habitation of Mars" [penwidth=3, weight=100]
+
+"Operational Mars Base"-> "Space Settlement Establishment"  [penwidth=3, weight=100]
+"Space Settlement Establishment" [penwidth=3, shape="doubleoctagon"]
+
+"Space Settlement Establishment"->"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"  [penwidth=3, weight=100]
+"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction" [penwidth=3, shape="doubleoctagon"]
+"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"->"Large Scale Human Occupation and Settlement of Space Begins" [penwidth=3, weight=100]
+"Large Scale Human Occupation and Settlement of Space Begins"->"L4 / L5 Initiate Island One Libration Point Habitation" [penwidth=3, weight=100]
+"L4 / L5 Initiate Island One Libration Point Habitation"[penwidth=3, shape="doubleoctagon"]
+"Large Scale Human Occupation and Settlement of Space Begins"  [penwidth=3, shape="doubleoctagon"]
+{ rank = same; 2043; "L4 / L5 Initiate Island One Libration Point Habitation"}
+
+"L4 / L5 Initiate Island One Libration Point Habitation"->"L4 / L5 Island Two" [penwidth=3, weight=100]
+"L4 / L5 Island Two"  [penwidth=3, shape="doubleoctagon"]
+{ rank = same; 2050; "L4 / L5 Island Two"}
+"L4 / L5 Island Two"->"L4 / L5 Multiple Settlement Construction" [penwidth=3, weight=100]
+"L4 / L5 Multiple Settlement Construction"  [penwidth=3, shape="doubleoctagon"]
+"L4 / L5 Multiple Settlement Construction"->"Emergence of Homo Sapiens as an Intragalactic Species" [penwidth=3, weight=100]
+"Emergence of Homo Sapiens as an Intragalactic Species"  [penwidth=3, shape="doubleoctagon"]
+"Emergence of Homo Sapiens as an Intragalactic Species"->"Independent Spacefaring Human Communities" [penwidth=3, weight=100]
+"Independent Spacefaring Human Communities"  [penwidth=3, shape="doubleoctagon"]
+{ rank = same; 2100; "Independent Spacefaring Human Communities"}
+"Independent Spacefaring Human Communities"->"Interstellar Traversing World Ships" -> "Ad Astra"
+"Ad Astra" [penwidth=5, shape="tripleoctagon"]
+
+"Initiate Martian Terraforming Operations" ->"L4 / L5 Initiate Island One Libration Point Habitation" 
+
+
+"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"-> "Initiate Martian Terraforming Operations" 
+
+
 "American Space Shuttle Program (NSTS)" -> 
 {
 "US / International Space Station Project" 
@@ -118,11 +186,12 @@ node [shape="box"];
 }
 
 
-"American Space Shuttle Program (NSTS)"->"US / International Space Station Project" [penwidth=3]
-"US / International Space Station Project" [penwidth=3, shape="doubleoctagon"]
+
+
+
 "US / International Space Station Project" -> 
 {
-"Lunar Orbit Staging / Facility"
+
 "FTS"
 "Crew Return Vehicle"
 "Station Structure"
@@ -195,7 +264,6 @@ node [shape="box"];
 
 "CIT" -> "US / International Space Station Project"
 "Plant and Animal Vivarium Lab" -> "Free Flying Research / Manufacturing Labs"
-"Lunar Orbit Staging / Facility" -> "Return-to-Moon"
 
 
 
@@ -274,7 +342,7 @@ node [shape="box"];
 { rank = same; 2008; "Lunar Outpost Established"}
 { rank = same; 2008; "Cycler Propulsion Element"}
 { rank = same; 2008; "Near-Earth Solar Sail Asteroid Explorer"}
-"Return-to-Moon" -> "Lunar Outpost Established" -> "International Lunar Base" -> "LEO International Spaceport" -> "Moonport" -> "Self-Supporting Lunar Base" -> "Phobos Outpost Established" -> "Mars Landing - Human Outpost Established" -> "Phobos / Deimos Mining Operations Commence" -> "Initial Mars Base Established" -> "Martian Spaceport" -> "Operational Mars Base" -> "Self-Supporting Mars Base" -> "Initiate Martian Terraforming Operations" -> "Large Scale Human Habitation of Mars"
+
 "Nuclear Powered Electric Propulsion" -> "Outer Planets Flyby / Probes"
 
 "Earth-Mars Injection Capability (Chemical)" ->
@@ -369,27 +437,19 @@ node [shape="box"];
 
 { rank = same; 2028; "Martian Spaceport" }
 { rank = same; 2028; "HEDM Chemical Propulsion" }
-"Operational Mars Base"->"Space Settlement Establishment"
-subgraph cluster_GAIA_PROLIFERATES
-{
-graph[style="rounded"]
-color=blue;
-label = "Gaia Proliferates"
+
 "L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"->"Expanding HEO Industrial Capability"
 "Expanding HEO Industrial Capability"->"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"
 "L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"->"Metallic Asteroid Reconfiguration-Planetoid Forming"
 "Expanding HEO Industrial Capability"->"Metallic Asteroid Reconfiguration-Planetoid Forming"
-"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"->"Large Scale Human Occupation and Settlement of Space Begins"
+
 "Large Scale Human Occupation and Settlement of Space Begins"->"Dark Surface Soil of Giant Solar Reflector Emplacement"
 "Polar Orbiting Environmental Observation Platforms"->"Dark Surface Soil of Giant Solar Reflector Emplacement"
-"Large Scale Human Occupation and Settlement of Space Begins"->"L4 / L5 Initiate Island One Libration Point Habitation"
+
 "Expanding HEO Industrial Capability"->"SSPS Plant Production"
 "L4 / L5 Initiate Island One Libration Point Habitation"->"SSPS Plant Production"
 
-}
-"Space Settlement Establishment"->"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"
-"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"-> "Initiate Martian Terraforming Operations" 
-"Initiate Martian Terraforming Operations" ->"L4 / L5 Initiate Island One Libration Point Habitation"
+
 "Polar Orbiting Environmental Observation Platforms"->"Initiate Martian Terraforming Operations"
 
 "HEDM Chemical Propulsion" -> "Initiate Earth-Venus Cycling Space Ship Transportation System"
@@ -434,7 +494,7 @@ label = "Gaia Proliferates"
 "Fusion Propulsion" -> "Human Interstellar Travel"
 "Human Interstellar Travel" -> "Ad Astra"
 
-"L4 / L5 Initiate Island One Libration Point Habitation"->"L4 / L5 Island Two"->"L4 / L5 Multiple Settlement Construction"->"Emergence of Homo Sapiens as an Intragalactic Species"->"Independent Spacefaring Human Communities"->"Interstellar Traversing World Ships" -> "Ad Astra"
+
 
 "Propulsion System Integration"->"Independent Spacefaring Human Communities"
 "Expanding L4 / L5 Industrial Society"->"Propulsion System Integration"
@@ -445,7 +505,24 @@ label = "Gaia Proliferates"
 "Growing L4 / L5 Industrial Capability"->"L4 / L5 Island Two"
 "L4 / L5 Island Two"->"Expanding L4 / L5 Industrial Society"
 "L4 / L5 Multiple Settlement Construction"->"SSPS Plant Production"
+"L4 / L5 Initiate Island One Libration Point Habitation"->"SSPS Plant Production"
 "L4 / L5 Multiple Settlement Construction"->"Expanding L4 / L5 Industrial Society"
 "L4 / L5 Initiate Island One Libration Point Habitation"->"Growing L4 / L5 Industrial Capability"
+"Metallic Asteroid Reconfiguration-Planetoid Forming"->"Independent Spacefaring Human Communities"
+"Metallic Asteroid Reconfiguration-Planetoid Forming"->"L4 / L5 Multiple Settlement Construction"
+"Near-Earth-Orbit Asteroid / Comet Exploitation"->"Expanding L4 / L5 Industrial Society"
+"Mainbelt Asteroid Orbit Change / Exploitation"->
+{
+"SSPS Plant Production"
+"Expanding L4 / L5 Industrial Society"
+"L4 / L5 Multiple Settlement Construction"
+}
+"Initiate Martian Terraforming Operations"->
+{
+"L4 / L5 Initiate Island One Libration Point Habitation"
+"L4 / L5 Island Two"
+"L4 / L5 Multiple Settlement Construction"
+"Independent Spacefaring Human Communities"
 
+}
 }
