@@ -3,7 +3,7 @@ digraph GRAPH_0 {
 node [shape="box"];
 
 
-{ node [shape=plaintext, fontsize=16];
+{ node [shape=plaintext, fontsize=24];
   /* the time-line graph */
   1983 -> 1988 -> 1993 -> 1998 -> 2003 -> 2008 -> 2013 -> 2018 -> 2023 -> 2028 -> 2033 -> 2038 -> 2043 -> 2050 -> 2100 
 }
@@ -19,45 +19,47 @@ node [shape="box"];
 "US / International Space Station Project" ->"Lunar Orbit Staging / Facility" [penwidth=3, weight=100]
 "Lunar Orbit Staging / Facility" [penwidth=3,shape="doubleoctagon"]
 "Lunar Orbit Staging / Facility" -> "Return-to-Moon"  [penwidth=3, weight=100]
-"Return-to-Moon" [penwidth=3, shape="doubleoctagon"]
+"Return-to-Moon" 
 "Return-to-Moon" -> "Lunar Outpost Established"  [penwidth=3, weight=100]
-"Lunar Outpost Established" [penwidth=3, shape="doubleoctagon"]
+"Lunar Outpost Established" 
 "Lunar Outpost Established" -> "International Lunar Base"  [penwidth=3, weight=100]
-"International Lunar Base" [penwidth=3, shape="doubleoctagon"]
+"International Lunar Base"
 "International Lunar Base" -> "LEO International Spaceport" [penwidth=3, weight=100]
  "LEO International Spaceport" [penwidth=3, shape="doubleoctagon"]
 "LEO International Spaceport" ->  "Moonport"  [penwidth=3, weight=100]
 "Moonport" [penwidth=3, shape="doubleoctagon"]
 "Moonport" -> "Self-Supporting Lunar Base"  [penwidth=3, weight=100]
-"Self-Supporting Lunar Base" [penwidth=3, shape="doubleoctagon"]
+"Self-Supporting Lunar Base"
 "Self-Supporting Lunar Base" -> "Phobos Outpost Established"  [penwidth=3, weight=100]
 "Phobos Outpost Established" [penwidth=3, shape="doubleoctagon"]
 "Phobos Outpost Established" -> "Mars Landing - Human Outpost Established" [penwidth=3, weight=100]
-"Mars Landing - Human Outpost Established"  [penwidth=3, shape="doubleoctagon"]
+"Mars Landing - Human Outpost Established" 
 "Mars Landing - Human Outpost Established" -> "Phobos / Deimos Mining Operations Commence"  [penwidth=3, weight=100]
-"Phobos / Deimos Mining Operations Commence" [penwidth=3, shape="doubleoctagon"]
+"Phobos / Deimos Mining Operations Commence"
 "Phobos / Deimos Mining Operations Commence"-> "Initial Mars Base Established" [penwidth=3, weight=100] 
-"Initial Mars Base Established" [penwidth=3, shape="doubleoctagon"]
-"Initial Mars Base Established"-> "Martian Spaceport"  [penwidth=3, weight=100]
-"Martian Spaceport" [penwidth=3, shape="doubleoctagon"]
-"Martian Spaceport"-> "Operational Mars Base"  [penwidth=3, weight=100]
-"Operational Mars Base" [penwidth=3, shape="doubleoctagon"]
+"Initial Mars Base Established" 
+"Initial Mars Base Established"-> "Advanced Technology LEO Space Station"  [penwidth=3, weight=100]
+"Advanced Technology LEO Space Station"
+"Advanced Technology LEO Space Station"-> "Martian Spaceport Expanded Phobos Facility"  [penwidth=3, weight=100]
+"Martian Spaceport Expanded Phobos Facility" [penwidth=3, shape="doubleoctagon"]
+"Martian Spaceport Expanded Phobos Facility"-> "Operational Mars Base"  [penwidth=3, weight=100]
+"Operational Mars Base"
 "Operational Mars Base"-> "Self-Supporting Mars Base"  [penwidth=3, weight=100]
 
-"Self-Supporting Mars Base" [penwidth=3, shape="doubleoctagon"]
+"Self-Supporting Mars Base"
 "Self-Supporting Mars Base"-> "Initiate Martian Terraforming Operations"  [penwidth=3, weight=100]
 "Initiate Martian Terraforming Operations"
 "Initiate Martian Terraforming Operations"-> "Large Scale Human Habitation of Mars" [penwidth=3, weight=100]
 
 "Operational Mars Base"-> "Space Settlement Establishment"  [penwidth=3, weight=100]
-"Space Settlement Establishment" [penwidth=3, shape="doubleoctagon"]
+"Space Settlement Establishment" [shape=plaintext, fontsize=16]
 
 "Space Settlement Establishment"->"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"  [penwidth=3, weight=100]
 "L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction" [penwidth=3, shape="doubleoctagon"]
 "L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"->"Large Scale Human Occupation and Settlement of Space Begins" [penwidth=3, weight=100]
 "Large Scale Human Occupation and Settlement of Space Begins"->"L4 / L5 Initiate Island One Libration Point Habitation" [penwidth=3, weight=100]
 "L4 / L5 Initiate Island One Libration Point Habitation"[penwidth=3, shape="doubleoctagon"]
-"Large Scale Human Occupation and Settlement of Space Begins"  [penwidth=3, shape="doubleoctagon"]
+"Large Scale Human Occupation and Settlement of Space Begins"  [shape=plaintext, fontsize=16]
 { rank = same; 2043; "L4 / L5 Initiate Island One Libration Point Habitation"}
 
 "L4 / L5 Initiate Island One Libration Point Habitation"->"L4 / L5 Island Two" [penwidth=3, weight=100]
@@ -66,12 +68,12 @@ node [shape="box"];
 "L4 / L5 Island Two"->"L4 / L5 Multiple Settlement Construction" [penwidth=3, weight=100]
 "L4 / L5 Multiple Settlement Construction"  [penwidth=3, shape="doubleoctagon"]
 "L4 / L5 Multiple Settlement Construction"->"Emergence of Homo Sapiens as an Intragalactic Species" [penwidth=3, weight=100]
-"Emergence of Homo Sapiens as an Intragalactic Species"  [penwidth=3, shape="doubleoctagon"]
+"Emergence of Homo Sapiens as an Intragalactic Species"  [shape=plaintext, fontsize=16]
 "Emergence of Homo Sapiens as an Intragalactic Species"->"Independent Spacefaring Human Communities" [penwidth=3, weight=100]
 "Independent Spacefaring Human Communities"  [penwidth=3, shape="doubleoctagon"]
 { rank = same; 2100; "Independent Spacefaring Human Communities"}
 "Independent Spacefaring Human Communities"->"Interstellar Traversing World Ships" -> "Ad Astra"
-"Ad Astra" [penwidth=5, shape="tripleoctagon"]
+"Ad Astra"  [shape=plaintext, fontsize=16]
 
 "Initiate Martian Terraforming Operations" ->"L4 / L5 Initiate Island One Libration Point Habitation" 
 
