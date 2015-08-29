@@ -67,6 +67,7 @@ digraph GRAPH_0 {
 "Planetary / Scientific Missions"
 "Spacelab (International)"
 "GPS Constellation"
+"Voyager II Uranus Encounter"
 }
 
 "Private Launch Vehicles (ELV's)"-> 
@@ -77,6 +78,21 @@ digraph GRAPH_0 {
 
 
 { rank = same; 1988; "Satellite Refueling Capability" }
+
+"Voyager II Uranus Encounter" -> "Voyager II Neptune" //1983->1988
+
+"Soviet Phobos Encounter" -> //1988
+{
+"Magellan"
+"Mars Observer"
+}
+
+"American Space Shuttle Program (NSTS)" -> "Magellan"
+"Magellan" -> "Voyager II Neptune"
+"Voyager II Neptune" -> "Galileo"
+"Galileo" -> "Ulysses (International)"
+"Ulysses (International)" -> "Mars Observer"
+"ELV Deployment Possibility" -> "Mars Observer"
 
 
 "RMS (International)" -> 
@@ -117,6 +133,21 @@ digraph GRAPH_0 {
 "Mission to Planet Earth - Element & Data Integration"->"Coorbiting Low Inclination Platforms"
 "Coorbiting Low Inclination Platforms"->"Mission to Planet Earth - Element & Data Integration"
 
+//1993
+"American Space Shuttle Program (NSTS)" ->  "Solar Sail Demonstration"
+"ELV Deployment Possibility" -> 
+{
+"Solar Sail Demonstration"
+"CRAF"
+"Lunear Observer"
+"Lunar Landing Site Recon Mission?"
+"Lunar Rover / Sample Return Missions?"
+}
+"Solar Sail Demonstration" -> "Centaur / SDV Deep Space Capability"
+"Ulysses (International)" -> "Starprobe"
+"CRAF" -> "Starprobe"
+"Lunar Observer" -> "Lunar Landing Site Recon Mission?"
+"Lunar Landing Site Recon Mission?" -> "Lunar Rover / Sample Return Missions?"
 
 { rank = same; 1998; "US / International Space Station Project"}
 "US / International Space Station Project" -> "Lunar Orbit Staging / Facility"
@@ -128,6 +159,35 @@ digraph GRAPH_0 {
 "Plant and Animal Vivarium Lab" -> "Free Flying Research / Manufacturing Labs"
 "US / International Space Station Project" -> "Logistics Elements"
 "Lunar Orbit Staging / Facility" -> "Return-to-Moon"
+"Lunar Rover / Sample Return Missions?" -> 
+{
+"Mars Rover / Sample Return Missions"
+"Aerobrake Capability"
+}
+
+"Mars Observer" -> "Mars Rover / Sample Return Missions"
+"Centaur / SDV Deep Space Capability" -> "Centaur HLV or MLV Deep Space Missions"
+"Centaur HLV or MLV Deep Space Missions" -> 
+{
+"Mars Rover / Sample Return Missions"
+"Mercury Orbiter"
+"Phobos Sample Return Mission"
+"Solar Powered Electric Propulsion"
+}
+
+"Mars Rover / Sample Return Missions" -> 
+{
+"Saturn-Titan Cassini Mission (International)"
+"Aerobrake Capability"
+}
+"Saturn-Titan Cassini Mission (International)" ->
+{
+"Mercury Orbiter"
+"Aerobrake Capability"
+}
+
+"Mercury Orbiter" -> "Phobos Sample Return Mission"
+
 { rank = same; 2008; "Lunar Outpost Established"}
 "Return-to-Moon" -> "Lunar Outpost Established" -> "International Lunar Base" -> "LEO International Spaceport" -> "Moonport" -> "Self-Supporting Lunar Base" -> "Phobos Outpost Established" -> "Mars Landing - Human Outpost Established" -> "Phobos / Deimos Mining Operations Commence" -> "Initial Mars Base Establishd" -> "Martian Spaceport" -> "Operational Mars Base" -> "Self-Supporting Mars Base" -> "Initiate Martian Terraforming Operations"
 
