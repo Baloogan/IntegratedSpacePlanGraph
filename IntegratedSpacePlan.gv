@@ -79,9 +79,9 @@ digraph GRAPH_0 {
 
 { rank = same; 1988; "Satellite Refueling Capability" }
 
-"Voyager II Uranus Encounter" -> "Voyager II Neptune" //1983->1988
+"Voyager II Uranus Encounter" -> "Voyager II Neptune"
 
-"Soviet Phobos Encounter" -> //1988
+"Soviet Phobos Encounter" ->
 {
 "Magellan"
 "Mars Observer"
@@ -133,7 +133,7 @@ digraph GRAPH_0 {
 "Mission to Planet Earth - Element & Data Integration"->"Coorbiting Low Inclination Platforms"
 "Coorbiting Low Inclination Platforms"->"Mission to Planet Earth - Element & Data Integration"
 
-//1993
+{ rank = same; 1993; "US / International Space Station Project Mission For Planet Earth" }
 "American Space Shuttle Program (NSTS)" ->  "Solar Sail Demonstration"
 "ELV Deployment Possibility" -> 
 {
@@ -188,7 +188,7 @@ digraph GRAPH_0 {
 
 "Mercury Orbiter" -> "Phobos Sample Return Mission"
 
-//2003
+{ rank = same; 2003; "Lunar Orbit Staging / Facility (LOS/F)" }
 "Solar Powered Electric Propulsion" ->
 {
 "Lunar Electric Cargo Vehicle"
