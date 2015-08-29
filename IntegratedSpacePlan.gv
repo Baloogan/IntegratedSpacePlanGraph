@@ -102,16 +102,29 @@ node [shape="box"];
 }
 
 
+"Evolvable OMV"->
+{
+"FTS"
+"MOMV" 
+"Space Harboring / Servicing / Tending & LEO Propellant Depot"
+"US / International Space Station Project"
+}
+
+
 "RMS (International)" -> "Solar Max / Space Telescope Mission Types"
 "IUS" -> "TDRS Constellation"
 "US / International Space Station Project"->"Waste Dump"
 "Waste Dump"->"US / International Space Station Project"
-"Evolvable OMV"->"FTS"
 "Spacelab (International)"->"EDO"->"CDSF"
 
 
-"Evolvable OMV"->"MOMV" 
-"Evolvable OTV"->"FTS"
+"Evolvable OTV" ->
+{
+"US / International Space Station Project"
+"Space Harboring / Servicing / Tending & LEO Propellant Depot"
+"FTS"
+}
+
 "Mission to Planet Earth - Element & Data Integration"->"US / International Space Station Project"
 "Suborbital ET Applications"->"ET / ACC"
 "LEO External Tank Resource Base / Momentum Reservoir"->"Waste Dump"
@@ -121,19 +134,16 @@ node [shape="box"];
 "EDO" -> "US / International Space Station Project"
 "CDSF" -> "US / International Space Station Project"
 "Spacehab" -> "US / International Space Station Project"
-"Evolvable OMV" -> "US / International Space Station Project"
-"Evolvable OTV" -> "US / International Space Station Project"
+
 
 "MOMV"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
 "FTS"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
-"Evolvable OTV"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
-"Evolvable OMV"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
 "ET / ACC"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
 
 
 "Coorbiting Low Inclination Platforms"->"US / International Space Station Project"
-"Mission to Planet Earth - Element & Data Integration"->"Coorbiting Low Inclination Platforms"
 "Coorbiting Low Inclination Platforms"->"Mission to Planet Earth - Element & Data Integration"
+"Mission to Planet Earth - Element & Data Integration"->"Coorbiting Low Inclination Platforms"
 
 
 { rank = same; 1998; "US / International Space Station Project"}
