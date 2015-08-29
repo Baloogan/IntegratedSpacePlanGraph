@@ -116,7 +116,17 @@ node [shape="box"];
 
 
 "Evolvable OMV"->"MOMV" 
-"Evolvable OTV"->"FTS"
+"Evolvable OTV"->
+{
+"FTS"
+"2 Stage LEO-GEO-LEO STV Capability"
+}
+"Space Harboring / Servicing / Tending & LEO Propellant Depot" -> 
+{
+"2 Stage LEO-GEO-LEO STV Capability"
+"GEO MPE Biosphere Observation Platforms Deployed"
+}
+
 "Mission to Planet Earth - Element & Data Integration"->"US / International Space Station Project"
 "Suborbital ET Applications"->
 {
@@ -227,11 +237,22 @@ node [shape="box"];
 "US / International Space Station Project"
 "Space Harboring / Servicing / Tending & LEO Propellant Depot"
 "FTS"
+"Manned Space Transfer Vehicle"
 }
 
 "Mission to Planet Earth - Element & Data Integration"->"US / International Space Station Project"
-"LEO External Tank Resource Base / Momentum Reservoir"->"Waste Dump"
-
+"LEO External Tank Resource Base / Momentum Reservoir"->
+{
+"Waste Dump"
+"GEO Cryogenic And Hypergolic Propellant Depot"
+}
+"GEO Cryogenic And Hypergolic Propellant Depot" ->
+{
+"Lunar Landing Elements - Lunar Personnel Lander And Lunar Cargo Lander"
+"Piloted Lunar Transfer Capability - Lunar Piloted Vehicle"
+"Commercial Manned GEO Communications Platforms"
+"LLOX To LLO Lunar Propellant Tanker"
+}
 
 "TDRS Constellation" -> "US / International Space Station Project"
 "EDO" -> "US / International Space Station Project"
@@ -247,7 +268,95 @@ node [shape="box"];
 "Manned Space Transfer Vehicle"
 "MOMV"
 }
+"Independent LEO Transportation Node And Fuel Depot" -> "Manned Space Transfer Vehicle"
+"Remote Tended GEO" -> "Independent LEO Transportation Node And Fuel Depot"
+"Manned Space Transfer Vehicle" -> 
+{
+"Man Tended GEO"
+"Piloted Lunar Transfer Capability - Lunar Piloted Vehicle"
+}
 
+"Man Tended GEO" -> 
+{
+"Aerobrake Capability"
+"Man Tended GEO Comm Platforms"
+"GEO Cryogenic And Hypergolic Propellant Depot"
+"Commercial Manned GEO Communications Platforms"
+"Increased Capability POTV"
+}
+"Man Tended GEO Comm Platforms" -> "Commercial Manned GEO Communications Platforms"
+
+"Commercial Manned GEO Communications Platforms" ->
+{
+"Increased Capacity POTV"
+"HEO Industrial / SSPS Production Facilities"
+}
+
+
+"Aerobrake Capability" -> "Piloted Lunar Transfer Capability - Lunar Piloted Vehicle"
+"Piloted Lunar Transfer Capability - Lunar Piloted Vehicle" ->
+{
+"Return-To-Moon Core Sample Collection And Analysis"
+"Lunar Landing Elements - Lunar Personnel Lander And Lunar Cargo Lander"
+"Lunar Orbit Staging / Facility"
+"Increased Capacity POTV"
+"LEO Hydrogen To LLO / HEO Capability"
+"HEO Industrial / SSPS Production Facilities"
+}
+"Lunar Landing Elements - Lunar Personnel Lander And Lunar Cargo Lander" ->
+{
+"Mars Crew Sortie Vehicle"
+"LLOX To LLO Lunar Propellant Tanker"
+"Output Enabling Equipment Evaluation"
+"Habitation And Research Modules"
+"In-Situ LLOX Pilot Production Unit"
+"Volume Intesive Pressurized Hanger Assembly Capability"
+"LLOX Production & Cryo Storage Facility"
+"Ore Extraction And Regolith Processing"
+"Amorphous Cell And Support Structure Manufacturing"
+"Fiber-Optic Cable Manufacturing"
+"He3 Export"
+"Commercial Manned GEO Communications Platforms"
+"Increased Capacity POTV"
+"LEO Hydrogen To LLO / HEO Capability"
+"HEO Industrial / SSPS Production Facilities"
+"LOSF Propellant Storage Depot"
+}
+"LLOX Production & Cryo Storage Facility" -> "Commercial Manned GEO Communications Platforms"
+"Ore Extraction And Regolith Processing" ->
+{
+"Commercial Manned GEO Communications Platforms"
+}
+"Advanced Life Support Research" -> "Commercial Manned GEO Communications Platforms"
+"Increased Capacity POTV" ->
+{
+"L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport"
+"HEO Propellant Depot"
+"HEO Industrial / SSPS Production Facilities"
+"LOSF Propellant Storage Depot"
+}
+"LLOX Production & Cryo Storage Facility" ->
+{
+"LLOX To LLO Lunar Propellant Tanker"
+}
+"LLOX To LLO Lunar Propellant Tanker" ->
+{
+"LOSF Propellant Storage Depot"
+"LEO Hydrogen To LLO / HEO Capability"
+"HEO Propellant Depot"
+}
+"LEO Hydrogen To LLO / HEO Capability" ->
+{
+"LOSF Propellant Storage Depot"
+"HEO Propellant Depot"
+}
+"HEO Industrial / SSPS Production Facilities" ->
+{
+"HEO Propellant Depot"
+"Fiber-Optic Cable Manufacturing"
+"Amorphous Cell And Support Structure Manufacturing"
+"L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport"
+}
 
 "MOMV"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
 "FTS"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
@@ -255,6 +364,7 @@ node [shape="box"];
 {
 "Space Harboring / Servicing / Tending & LEO Propellant Depot"
 "Commercial and Defense Sat Launches"
+"Independent LEO Transportation Node And Fuel Depot"
 }
 
 
@@ -280,6 +390,7 @@ node [shape="box"];
 
 { rank = same; 1998; "US / International Space Station Project"}
 { rank = same; 1998; "Lunar Rover / Sample Return Missions"}
+{ rank = same; 1998; "GEO MPE Biosphere Observation Platforms Deployed"}
 
 "CIT" -> "US / International Space Station Project"
 "Plant and Animal Vivarium Lab" -> "Free Flying Research / Manufacturing Labs"
@@ -321,6 +432,7 @@ node [shape="box"];
 
 { rank = same; 2003; "Solar Powered Electric Propulsion" }
 { rank = same; 2003; "Mars Aeronomy Orbiter" }
+{ rank = same; 2003; "Man Tended GEO Comm Platforms" }
 
 "Solar Powered Electric Propulsion" ->
 {
@@ -361,6 +473,7 @@ node [shape="box"];
 { rank = same; 2008; "Lunar Outpost Established"}
 { rank = same; 2008; "Cycler Propulsion Element"}
 { rank = same; 2008; "Near-Earth Solar Sail Asteroid Explorer"}
+{ rank = same; 2008; "GEO Cryogenic And Hypergolic Propellant Depot"}
 
 "Nuclear Powered Electric Propulsion" -> "Outer Planets Flyby / Probes"
 
@@ -393,6 +506,7 @@ node [shape="box"];
 
 { rank = same; 2013; "LEO International Spaceport" }
 { rank = same; 2013; "Transfer To L1" }
+{ rank = same; 2013; "LEO Hydrogen To LLO / HEO Capability" }
 "Transfer To L1" -> "LOSF Transfer To L1"
 "LOSF Transfer To L1" -> "L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport"
 "L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport" -> 
@@ -405,6 +519,7 @@ node [shape="box"];
 
 { rank = same; 2018; "Self-Supporting Lunar Base" }
 { rank = same; 2018; "Martian Cycling Spaceship Launch" }
+{ rank = same; 2018; "Manned Interplanetary Spaceflight Begins" }
 "L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport" -> 
 {
 "Manned Interplanetary Spaceflight Begins"
