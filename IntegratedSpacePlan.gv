@@ -433,4 +433,19 @@ label = "Gaia Proliferates"
 "Nuclear-Pulsed Propulsion (Orion Concept)" -> "Human Interstellar Travel"
 "Fusion Propulsion" -> "Human Interstellar Travel"
 "Human Interstellar Travel" -> "Ad Astra"
+
+"L4 / L5 Initiate Island One Libration Point Habitation"->"L4 / L5 Island Two"->"L4 / L5 Multiple Settlement Construction"->"Emergence of Homo Sapiens as an Intragalactic Species"->"Independent Spacefaring Human Communities"->"Interstellar Traversing World Ships" -> "Ad Astra"
+
+"Propulsion System Integration"->"Independent Spacefaring Human Communities"
+"Expanding L4 / L5 Industrial Society"->"Propulsion System Integration"
+"Expanding L4 / L5 Industrial Society"->"Independent Spacefaring Human Communities"
+"Growing L4 / L5 Industrial Capability"->"Propulsion System Integration"
+"Growing L4 / L5 Industrial Capability"->"Expanding L4 / L5 Industrial Society"
+"SSPS Plant Production"->"Growing L4 / L5 Industrial Capability"
+"Growing L4 / L5 Industrial Capability"->"L4 / L5 Island Two"
+"L4 / L5 Island Two"->"Expanding L4 / L5 Industrial Society"
+"L4 / L5 Multiple Settlement Construction"->"SSPS Plant Production"
+"L4 / L5 Multiple Settlement Construction"->"Expanding L4 / L5 Industrial Society"
+"L4 / L5 Initiate Island One Libration Point Habitation"->"Growing L4 / L5 Industrial Capability"
+
 }
