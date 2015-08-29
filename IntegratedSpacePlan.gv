@@ -10,7 +10,7 @@ node [shape="box"];
 
 { rank = same; 1983; "EMU"; "Private Launch Vehicles (ELV's)"}
 
-"American Space Shuttle Program (NSTS)" [penwidth=3]
+"American Space Shuttle Program (NSTS)" [penwidth=3,shape="doubleoctagon"]
 "American Space Shuttle Program (NSTS)" -> 
 {
 "US / International Space Station Project" 
@@ -26,6 +26,7 @@ node [shape="box"];
 "TDRS Constellation" 
 "Satellite Refueling Capability"
 "Solar Max / Space Telescope Mission Types"
+"Magellan"
 "Spacehab"
 "CDSF"
 "Evolvable OMV" 
@@ -46,14 +47,27 @@ node [shape="box"];
 {
 "MMU"
 "Satellite Retrieval and Servicing"
+"Solar Max / Space Telescope Mission Types"
 "Satellite Refueling Capability"
 }
 
 "MMU" ->
 {
-"Satellite Retrieval and Servicing"
+"Satellite Retrieval and Servicing" /* Has an extra arrow on poster */
 "Satellite Refueling Capability"
+"Solar Max / Space Telescope Mission Types"
 }
+
+
+"Satellite Retrieval and Servicing" ->
+{
+"Satellite Refueling Capability"
+"Solar Max / Space Telescope Mission Types"
+}
+
+
+
+
 
 "International Expendable Launch Vehicle Fleet" -> 
 {
@@ -63,6 +77,7 @@ node [shape="box"];
 "Planetary / Scientific Missions"
 "Spacelab (International)"
 "GPS Constellation"
+"Voyager II Uranus Encounter"
 }
 
 "Private Launch Vehicles (ELV's)"-> 
@@ -79,16 +94,12 @@ node [shape="box"];
 {
 "Satellite Retrieval and Servicing"
 "Satellite Refueling Capability"
-}
-
-
-"Satellite Retrieval and Servicing" ->
-{
-"Satellite Refueling Capability"
 "Solar Max / Space Telescope Mission Types"
 }
 
 
+"American Space Shuttle Program (NSTS)"->"US / International Space Station Project" [penwidth=3]
+"US / International Space Station Project" [penwidth=3, shape="doubleoctagon"]
 "US / International Space Station Project" -> 
 {
 "Lunar Orbit Staging / Facility"
@@ -110,8 +121,33 @@ node [shape="box"];
 "US / International Space Station Project"
 }
 
+"Voyager II Uranus Encounter"->"Voyager II Neptune"
+"Soviet Phobos Encounter"->"Mars Observer"
+"Soviet Phobos Encounter"->"Magellan"->"Voyager II Neptune"->"Gallileo"->"Ulysses (International)"->"Mars Observer"
+"ELV Deployment Possibility"->
+{
+"Mars Observer"
+"CRAF"
+"Solar Sail Demonstration"
+"Lunar Observer"
+"Lunar Landing Site Recon Mission"
+"Mars Rover / Sample Return Missions"
+"Saturn-Titan Cassini Mission (International)"
+"Lunar Rover / Sample Return Missions"
+}
+"CRAF"->"Starprobe"
+"Ulysses (International)"->"Starprobe"
+"Lunar Observer"->"Lunar Landing Site Recon Mission"->"Lunar Rover / Sample Return Missions"->"Mars Rover / Sample Return Missions"->"Saturn-Titan Cassini Mission (International)"->"Mercury Orbiter" -> "Phobos Sample Return Mission"->"Mars Aeronomy Orbiter"->"Comet Sample Return Mission"->"Mainbelt Asteroid Multi-orbiter / Flyby"->"Mars Network Mission"->"Venus Sample Return Mission"->"Near-Earth Solar Sail Asteroid Explorer"->"Outer Planets Flyby / Probes"
 
-"RMS (International)" -> "Solar Max / Space Telescope Mission Types"
+"Mars Observer"->
+{
+"Lunar Observer"
+"Mars Rover / Sample Return Missions"
+}
+
+
+
+
 "IUS" -> "TDRS Constellation"
 "US / International Space Station Project"->"Waste Dump"
 "Waste Dump"->"US / International Space Station Project"
