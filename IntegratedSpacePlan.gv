@@ -1,5 +1,8 @@
 digraph GRAPH_0 {
 
+node [shape="box"];
+
+
 { node [shape=plaintext, fontsize=16];
   /* the time-line graph */
   1983 -> 1988 -> 1993 -> 1998 -> 2003 -> 2008 -> 2013 -> 2018 -> 2023 -> 2028 -> 2033 -> 2038 -> 2043 -> 2050 -> 2100 
@@ -7,6 +10,7 @@ digraph GRAPH_0 {
 
 { rank = same; 1983; "EMU"; "Private Launch Vehicles (ELV's)"}
 
+"American Space Shuttle Program (NSTS)" [penwidth=3]
 "American Space Shuttle Program (NSTS)" -> 
 {
 "US / International Space Station Project" 
@@ -37,14 +41,6 @@ digraph GRAPH_0 {
 "CIT"
 
 }
-
-
-"Evolvable OMV"->"MOMV" 
-"Evolvable OTV"->"FTS"
-"Mission to Planet Earth - Element & Data Integration"->"US / International Space Station Project"
-"Suborbital ET Applications"->"ET / ACC"
-"LEO External Tank Resource Base / Momentum Reservoir"->"Waste Dump"
-
 
 "EMU" -> 
 {
@@ -92,6 +88,20 @@ digraph GRAPH_0 {
 "Solar Max / Space Telescope Mission Types"
 }
 
+
+"US / International Space Station Project" -> 
+{
+"Lunar Orbit Staging / Facility"
+"FTS"
+"Crew Return Vehicle"
+"Station Structure"
+"International Space Station Modules"
+"Logistics Elements"
+"Coorbiting Low Inclination Platforms"
+"Space Harboring / Servicing / Tending & LEO Propellant Depot"
+}
+
+
 "RMS (International)" -> "Solar Max / Space Telescope Mission Types"
 "IUS" -> "TDRS Constellation"
 "US / International Space Station Project"->"Waste Dump"
@@ -99,43 +109,77 @@ digraph GRAPH_0 {
 "Evolvable OMV"->"FTS"
 "Spacelab (International)"->"EDO"->"CDSF"
 
+
+"Evolvable OMV"->"MOMV" 
+"Evolvable OTV"->"FTS"
+"Mission to Planet Earth - Element & Data Integration"->"US / International Space Station Project"
+"Suborbital ET Applications"->"ET / ACC"
+"LEO External Tank Resource Base / Momentum Reservoir"->"Waste Dump"
+
+
 "TDRS Constellation" -> "US / International Space Station Project"
 "EDO" -> "US / International Space Station Project"
 "CDSF" -> "US / International Space Station Project"
 "Spacehab" -> "US / International Space Station Project"
 "Evolvable OMV" -> "US / International Space Station Project"
 "Evolvable OTV" -> "US / International Space Station Project"
-"US / International Space Station Project" ->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
+
 "MOMV"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
 "FTS"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
 "Evolvable OTV"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
 "Evolvable OMV"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
 "ET / ACC"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
 
-"US / International Space Station Project"->"Coorbiting Low Inclination Platforms"
+
 "Coorbiting Low Inclination Platforms"->"US / International Space Station Project"
 "Mission to Planet Earth - Element & Data Integration"->"Coorbiting Low Inclination Platforms"
 "Coorbiting Low Inclination Platforms"->"Mission to Planet Earth - Element & Data Integration"
 
 
 { rank = same; 1998; "US / International Space Station Project"}
-"US / International Space Station Project" -> "Lunar Orbit Staging / Facility"
-"US / International Space Station Project" -> "FTS"
+
 "CIT" -> "US / International Space Station Project"
-"US / International Space Station Project" -> "Crew Return Vehicle"
-"US / International Space Station Project" -> "Station Structure" -> "Solar Arrays" ->"International Space Station Modules"
-"US / International Space Station Project" -> "International Space Station Modules" ->"Plant and Animal Vivarium Lab"->"Partially Closed Component CELSS"
 "Plant and Animal Vivarium Lab" -> "Free Flying Research / Manufacturing Labs"
-"US / International Space Station Project" -> "Logistics Elements"
 "Lunar Orbit Staging / Facility" -> "Return-to-Moon"
+
+
+
+"Station Structure" -> "Solar Arrays" ->"International Space Station Modules"
+"International Space Station Modules" ->"Plant and Animal Vivarium Lab"->"Partially Closed Component CELSS"
+
+
 { rank = same; 2008; "Lunar Outpost Established"}
-"Return-to-Moon" -> "Lunar Outpost Established" -> "International Lunar Base" -> "LEO International Spaceport" -> "Moonport" -> "Self-Supporting Lunar Base" -> "Phobos Outpost Established" -> "Mars Landing - Human Outpost Established" -> "Phobos / Deimos Mining Operations Commence" -> "Initial Mars Base Establishd" -> "Martian Spaceport" -> "Operational Mars Base" -> "Self-Supporting Mars Base" -> "Initiate Martian Terraforming Operations"
+"Return-to-Moon" -> "Lunar Outpost Established" -> "International Lunar Base" -> "LEO International Spaceport" -> "Moonport" -> "Self-Supporting Lunar Base" -> "Phobos Outpost Established" -> "Mars Landing - Human Outpost Established" -> "Phobos / Deimos Mining Operations Commence" -> "Initial Mars Base Established" -> "Martian Spaceport" -> "Operational Mars Base" -> "Self-Supporting Mars Base" -> "Initiate Martian Terraforming Operations" -> "Large Scale Human Habitation of Mars"
 
 { rank = same; 2013; "LEO International Spaceport" }
 { rank = same; 2018; "Self-Supporting Lunar Base" }
 { rank = same; 2023; "Phobos / Deimos Mining Operations Commence" }
 { rank = same; 2028; "Martian Spaceport" }
+"Operational Mars Base"->"Space Settlement Establishment"
+subgraph cluster_GAIA_PROLIFERATES
+{
+graph[style="rounded"]
+color=blue;
+label = "Gaia Proliferates"
+"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"->"Expanding HEO Industrial Capability"
+"Expanding HEO Industrial Capability"->"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"
+"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"->"Metallic Asteroid Reconfiguration-Planetoid Forming"
+"Expanding HEO Industrial Capability"->"Metallic Asteroid Reconfiguration-Planetoid Forming"
+"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"->"Large Scale Human Occupation and Settlement of Space Begins"
+"Large Scale Human Occupation and Settlement of Space Begins"->"Dark Surface Soil of Giant Solar Reflector Emplacement"
+"Polar Orbiting Environmental Observation Platforms"->"Dark Surface Soil of Giant Solar Reflector Emplacement"
+"Large Scale Human Occupation and Settlement of Space Begins"->"L4 / L5 Initiate Island One Libration Point Habitation"
+"Expanding HEO Industrial Capability"->"SSPS Plant Production"
+"L4 / L5 Initiate Island One Libration Point Habitation"->"SSPS Plant Production"
+
+}
+"Space Settlement Establishment"->"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"
+"L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"-> "Initiate Martian Terraforming Operations" 
+"Initiate Martian Terraforming Operations" ->"L4 / L5 Initiate Island One Libration Point Habitation"
+"Polar Orbiting Environmental Observation Platforms"->"Initiate Martian Terraforming Operations"
+
 { rank = same; 2038; "Self-Supporting Mars Base" }
 { rank = same; 2043; "Initiate Martian Terraforming Operations" }
+{ rank = same; 2100; "Large Scale Human Habitation of Mars" }
 
 }
