@@ -43,6 +43,14 @@ node [shape="box"];
 
 }
 
+
+"Evolvable OMV"->"MOMV" 
+"Evolvable OTV"->"FTS"
+"Mission to Planet Earth - Element & Data Integration"->"US / International Space Station Project"
+"Suborbital ET Applications"->"ET / ACC"
+"LEO External Tank Resource Base / Momentum Reservoir"->"Waste Dump"
+
+
 "EMU" -> 
 {
 "MMU"
@@ -65,10 +73,6 @@ node [shape="box"];
 "Solar Max / Space Telescope Mission Types"
 }
 
-
-
-
-
 "International Expendable Launch Vehicle Fleet" -> 
 {
 "Private Launch Vehicles (ELV's)"
@@ -88,6 +92,21 @@ node [shape="box"];
 
 
 { rank = same; 1988; "Satellite Refueling Capability" }
+
+"Voyager II Uranus Encounter" -> "Voyager II Neptune"
+
+"Soviet Phobos Encounter" ->
+{
+"Magellan"
+"Mars Observer"
+}
+
+"American Space Shuttle Program (NSTS)" -> "Magellan"
+"Magellan" -> "Voyager II Neptune"
+"Voyager II Neptune" -> "Galileo"
+"Galileo" -> "Ulysses (International)"
+"Ulysses (International)" -> "Mars Observer"
+"ELV Deployment Possibility" -> "Mars Observer"
 
 
 "RMS (International)" -> 
@@ -120,33 +139,6 @@ node [shape="box"];
 "Space Harboring / Servicing / Tending & LEO Propellant Depot"
 "US / International Space Station Project"
 }
-
-"Voyager II Uranus Encounter"->"Voyager II Neptune"
-"Soviet Phobos Encounter"->"Mars Observer"
-"Soviet Phobos Encounter"->"Magellan"->"Voyager II Neptune"->"Gallileo"->"Ulysses (International)"->"Mars Observer"
-"ELV Deployment Possibility"->
-{
-"Mars Observer"
-"CRAF"
-"Solar Sail Demonstration"
-"Lunar Observer"
-"Lunar Landing Site Recon Mission"
-"Mars Rover / Sample Return Missions"
-"Saturn-Titan Cassini Mission (International)"
-"Lunar Rover / Sample Return Missions"
-}
-"CRAF"->"Starprobe"
-"Ulysses (International)"->"Starprobe"
-"Lunar Observer"->"Lunar Landing Site Recon Mission"->"Lunar Rover / Sample Return Missions"->"Mars Rover / Sample Return Missions"->"Saturn-Titan Cassini Mission (International)"->"Mercury Orbiter" -> "Phobos Sample Return Mission"->"Mars Aeronomy Orbiter"->"Comet Sample Return Mission"->"Mainbelt Asteroid Multi-orbiter / Flyby"->"Mars Network Mission"->"Venus Sample Return Mission"->"Near-Earth Solar Sail Asteroid Explorer"->"Outer Planets Flyby / Probes"
-
-"Mars Observer"->
-{
-"Lunar Observer"
-"Mars Rover / Sample Return Missions"
-}
-
-
-
 
 "IUS" -> "TDRS Constellation"
 "US / International Space Station Project"->"Waste Dump"
@@ -181,6 +173,21 @@ node [shape="box"];
 "Coorbiting Low Inclination Platforms"->"Mission to Planet Earth - Element & Data Integration"
 "Mission to Planet Earth - Element & Data Integration"->"Coorbiting Low Inclination Platforms"
 
+{ rank = same; 1993; "US / International Space Station Project Mission For Planet Earth" }
+"American Space Shuttle Program (NSTS)" ->  "Solar Sail Demonstration"
+"ELV Deployment Possibility" -> 
+{
+"Solar Sail Demonstration"
+"CRAF"
+"Lunar Observer"
+"Lunar Landing Site Recon Mission"
+"Lunar Rover / Sample Return Missions"
+}
+"Solar Sail Demonstration" -> "Centaur / SDV Deep Space Capability"
+"Ulysses (International)" -> "Starprobe"
+"CRAF" -> "Starprobe"
+"Lunar Observer" -> "Lunar Landing Site Recon Mission"
+"Lunar Landing Site Recon Mission" -> "Lunar Rover / Sample Return Missions"
 
 { rank = same; 1998; "US / International Space Station Project"}
 
@@ -194,12 +201,162 @@ node [shape="box"];
 "International Space Station Modules" ->"Plant and Animal Vivarium Lab"->"Partially Closed Component CELSS"
 
 
+"Lunar Rover / Sample Return Missions?" -> 
+{
+"Mars Rover / Sample Return Missions"
+"Aerobrake Capability"
+}
+
+"Mars Observer" -> "Mars Rover / Sample Return Missions"
+"Centaur / SDV Deep Space Capability" -> "Centaur HLV or MLV Deep Space Missions"
+"Centaur HLV or MLV Deep Space Missions" -> 
+{
+"Mars Rover / Sample Return Missions"
+"Mercury Orbiter"
+"Phobos Sample Return Mission"
+"Solar Powered Electric Propulsion"
+}
+
+"Mars Rover / Sample Return Missions" -> 
+{
+"Saturn-Titan Cassini Mission (International)"
+"Aerobrake Capability"
+}
+"Saturn-Titan Cassini Mission (International)" ->
+{
+"Mercury Orbiter"
+"Aerobrake Capability"
+}
+
+"Mercury Orbiter" -> "Phobos Sample Return Mission"
+
+{ rank = same; 2003; "Lunar Orbit Staging / Facility (LOS/F)" }
+"Solar Powered Electric Propulsion" ->
+{
+"Lunar Electric Cargo Vehicle"
+"Nuclear Powered Electric Propulsion"
+"Mars Aeronomy Orbiter"
+"Comet Sample Return Mission"
+"Mainbelt Asteroid Multi-Orbiter / Flyby"
+"Mars Network Mission"
+}
+
+"Phobos Sample Return Mission" -> "Mars Aeronomy Orbiter"
+"Mars Aeronomy Orbiter" -> "Comet Sample Return Mission"
+"Comet Sample Return Mission" ->
+{
+"LEO Quarantine"
+"Mainbelt Asteroid Multi-Orbiter / Flyby"
+}
+"Mainbelt Asteroid Multi-Orbiter / Flyby" -> "Mars Network Mission"
+"Mars Network Mission" -> "Venus Sample Return Mission"
+"Lunar Electric Cargo Vehicle" -> 
+{
+"Lunar Output Established"
+"Nuclear Powered Electric Propulsion"
+}
+"Nuclear Powered Electric Propulsion" ->
+{
+"Mainbelt Asteroid Multi-Orbiter / Flyby"
+"Earth-Mars ECV"
+}
+"Earth-Mars ECV" ->
+{
+"Mars Network Mission"
+"Earth-Mars Injection Capability (Chemical)"
+}
+"Earth-Mars Injection Capability (Chemical)" -> "Cycler Propulsion Element"
+
 { rank = same; 2008; "Lunar Outpost Established"}
 "Return-to-Moon" -> "Lunar Outpost Established" -> "International Lunar Base" -> "LEO International Spaceport" -> "Moonport" -> "Self-Supporting Lunar Base" -> "Phobos Outpost Established" -> "Mars Landing - Human Outpost Established" -> "Phobos / Deimos Mining Operations Commence" -> "Initial Mars Base Established" -> "Martian Spaceport" -> "Operational Mars Base" -> "Self-Supporting Mars Base" -> "Initiate Martian Terraforming Operations" -> "Large Scale Human Habitation of Mars"
+"Nuclear Powered Electric Propulsion" -> "Outer Planets Flyby / Probes"
+
+"Earth-Mars Injection Capability (Chemical)" ->
+{
+"Integrated Mars Transfer Vehicle"
+"Martian Cycling Spaceship Element Integration"
+}
+"Cycler Propulsion Element" ->
+{
+"MPV and MLL Transfer Elements"
+"Martian Cycling Spaceship Element Integration"
+}
+"Solar Sail Demonstration" -> "Near-Earth Solar Sail Asteroid Explorer"
+"Venus Sample Return Mission" -> "Near-Earth Solar Sail Asteroid Explorer"
+"Near-Earth Solar Sail Asteroid Explorer" -> "Outer Planet Flyby / Probes"
+"MPV and MLL Transfer Elements" -> 
+{
+"Mars Crew Sortie Vehicle"
+"Martian Cycling Spaceship Element Integration"
+}
+"Mars Crew Sortie Vehicle" ->
+{
+"Integrated Mars Transfer Vehicle"
+"Martian Cycling Spaceship Element Integration"
+}
+"Integrated Mars Transfer Vehicle" -> "LEO Assembly"
+"LEO Assembly" -> "Martian Cycling Spaceship Element Integration"
+"Martian Cycling Spaceship Element Integration" -> "Transfer To L1"
 
 { rank = same; 2013; "LEO International Spaceport" }
+"Transfer To L1" -> "LOSF Transfer To L1?"
+"LOSF Transfer To L1?" -> "L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport"
+"L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport" -> 
+{
+"L1 Absolute Containment Facility"
+"Hemispherical Earth Facing Comm Coverage"
+}
+"L1 Absolute Containment Facility" -> "Martian Cycling Spaceship Launch"
+
+
 { rank = same; 2018; "Self-Supporting Lunar Base" }
+"L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport" -> 
+{
+"Manned Interplanetary Spaceflight Begins"
+"Initiate Earth-Mars Cycling Spaceship Transportation System"
+"2nd Earth-Mars Cycling Spaceship / Mars Landing Goal"
+}
+"Initiate Earth-Mars Cycling Spaceship Transportation System" -> 
+{
+"2nd Earth-Mars Cycling Spaceship / Mars Landing Goal"
+"Manned Interplanetary Spaceflight Begins"
+"First Cycling Spaceship Return To Mars Initiate Martian Resource Exploitation"
+}
+"Martian Cycling Spaceship Launch" -> 
+{
+"Manned Interplanetary Spaceflight Begins"
+"Initiate Earth-Mars Cycling Spaceship Transportation System"
+}
+"Integrated Mars Transfer Vehicle" -> "First Manned Mars Landing Expedition"
+"2nd Earth-Mars Cycling Spaceship / Mars Landing Goal" ->
+{
+"First Manned Mars Landing Expedition"
+"First Cycling Spaceship Return To Mars Initiate Martian Resource Exploitation"
+}
+"First Cycling Spaceship Return To Mars Initiate Martian Resource Exploitation" ->
+{
+"Martian Proximity IDV"
+"C,H,O,N Extraction & Storage"
+}
+
+
+
 { rank = same; 2023; "Phobos / Deimos Mining Operations Commence" }
+"First Cycling Spaceship Return To Mars Initiate Martian Resource Exploitation" -> "Ion-Drive Engine Technology"
+"Ion-Drive Engine Technology" ->
+{
+"Initial Interstellar Exploration"
+"HEDM Chemical Propulsion"
+}
+"Outer Planets Flyby / Probe" -> "Initial Interstellar Exploration"
+"Initial Interstellar Exploration" -> "Tau 1000 A.U. Unmanned Probe"
+"HEDM Chemical Propulsion" -> 
+{
+"Tau 1000 A.U. Unmanned Probe"
+"Mars-Mainbelt Mobility Vehicle"
+}
+
+
 { rank = same; 2028; "Martian Spaceport" }
 "Operational Mars Base"->"Space Settlement Establishment"
 subgraph cluster_GAIA_PROLIFERATES
@@ -224,8 +381,42 @@ label = "Gaia Proliferates"
 "Initiate Martian Terraforming Operations" ->"L4 / L5 Initiate Island One Libration Point Habitation"
 "Polar Orbiting Environmental Observation Platforms"->"Initiate Martian Terraforming Operations"
 
-{ rank = same; 2038; "Self-Supporting Mars Base" }
-{ rank = same; 2043; "Initiate Martian Terraforming Operations" }
-{ rank = same; 2100; "Large Scale Human Habitation of Mars" }
+"HEDM Chemical Propulsion" -> "Initiate Earth-Venus Cycling Space Ship Transportation System"
+"Initiate Earth-Venus Cycling Space Ship Transportation System" ->
+{
+"Antimatter-Enriched Propellent Propulsion"
+"First Manned Venus Flyby"
+}
+"First Cycling Spaceship Return To Mars Initiate Martian Resource Exploitation" -> "Initiate Earth-Venus Cycling Space Ship Transportation System" 
+"Antimatter-Enriched Propellent Propulsion" -> "Human Outer Solar System Exploration Begins - Jupiter And Its Jovian Satellites"
 
+{ rank = same; 2038; "Self-Supporting Mars Base" }
+"Human Outer Solar System Exploration Begins - Jupiter And Its Jovian Satellites" -> "Fusion Propulsion"
+"Antimatter-Enriched Propellent Propulsion" -> "Fusion Propulsion"
+
+{ rank = same; 2043; "Initiate Martian Terraforming Operations" }
+"Fusion Propulsion" ->
+{
+"Interstellar Precursors"
+"Human Exploration Of Saturnian Satellites And Ring System"
+}
+"Tau 1000 A.U. Unmanned Probe" -> "Interstellar Precursors"
+"Antimatter-Enriched Propellent Propulsion" -> 
+{
+"Human Exploration Of Saturnian Satellites And Ring System"
+"Interstellar Precursors"
+}
+
+{ rank = same; 2050; "L4 / L5 Island Two" }
+"Human Exploration Of Saturnian Satellites And Ring System" -> "Nuclear-Pulsed Propulsion (Orion Concept)"
+"Nuclear-Pulsed Propulsion (Orion Concept)" -> "Human Outer Solar System Grand Tour - Uranus / Neptune / Pluto"
+"Fusion Propulsion" -> "Human Outer Solar System Grand Tour - Uranus / Neptune / Pluto"
+"Antimatter-Enriched Propellent Propulsion" -> "Human Outer Solar System Grand Tour - Uranus / Neptune / Pluto"
+
+{ rank = same; 2100; "Large Scale Human Habitation of Mars" }
+"Interstellar Precursors" -> "Human Interstellar Travel"
+"Human Outer Solar System Grand Tour - Uranus / Neptune / Pluto" -> "Human Interstellar Travel"
+"Nuclear-Pulsed Propulsion (Orion Concept)" -> "Human Interstellar Travel"
+"Fusion Propulsion" -> "Human Interstellar Travel"
+"Human Interstellar Travel" -> "Ad Astra"
 }
