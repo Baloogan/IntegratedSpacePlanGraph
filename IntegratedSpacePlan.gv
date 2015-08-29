@@ -73,10 +73,6 @@ node [shape="box"];
 "Solar Max / Space Telescope Mission Types"
 }
 
-
-
-
-
 "International Expendable Launch Vehicle Fleet" -> 
 {
 "Private Launch Vehicles (ELV's)"
@@ -144,33 +140,6 @@ node [shape="box"];
 "US / International Space Station Project"
 }
 
-"Voyager II Uranus Encounter"->"Voyager II Neptune"
-"Soviet Phobos Encounter"->"Mars Observer"
-"Soviet Phobos Encounter"->"Magellan"->"Voyager II Neptune"->"Gallileo"->"Ulysses (International)"->"Mars Observer"
-"ELV Deployment Possibility"->
-{
-"Mars Observer"
-"CRAF"
-"Solar Sail Demonstration"
-"Lunar Observer"
-"Lunar Landing Site Recon Mission"
-"Mars Rover / Sample Return Missions"
-"Saturn-Titan Cassini Mission (International)"
-"Lunar Rover / Sample Return Missions"
-}
-"CRAF"->"Starprobe"
-"Ulysses (International)"->"Starprobe"
-"Lunar Observer"->"Lunar Landing Site Recon Mission"->"Lunar Rover / Sample Return Missions"->"Mars Rover / Sample Return Missions"->"Saturn-Titan Cassini Mission (International)"->"Mercury Orbiter" -> "Phobos Sample Return Mission"->"Mars Aeronomy Orbiter"->"Comet Sample Return Mission"->"Mainbelt Asteroid Multi-orbiter / Flyby"->"Mars Network Mission"->"Venus Sample Return Mission"->"Near-Earth Solar Sail Asteroid Explorer"->"Outer Planets Flyby / Probes"
-
-"Mars Observer"->
-{
-"Lunar Observer"
-"Mars Rover / Sample Return Missions"
-}
-
-
-
-
 "IUS" -> "TDRS Constellation"
 "US / International Space Station Project"->"Waste Dump"
 "Waste Dump"->"US / International Space Station Project"
@@ -210,15 +179,15 @@ node [shape="box"];
 {
 "Solar Sail Demonstration"
 "CRAF"
-"Lunear Observer"
-"Lunar Landing Site Recon Mission?"
-"Lunar Rover / Sample Return Missions?"
+"Lunar Observer"
+"Lunar Landing Site Recon Mission"
+"Lunar Rover / Sample Return Missions"
 }
 "Solar Sail Demonstration" -> "Centaur / SDV Deep Space Capability"
 "Ulysses (International)" -> "Starprobe"
 "CRAF" -> "Starprobe"
-"Lunar Observer" -> "Lunar Landing Site Recon Mission?"
-"Lunar Landing Site Recon Mission?" -> "Lunar Rover / Sample Return Missions?"
+"Lunar Observer" -> "Lunar Landing Site Recon Mission"
+"Lunar Landing Site Recon Mission" -> "Lunar Rover / Sample Return Missions"
 
 { rank = same; 1998; "US / International Space Station Project"}
 
@@ -444,9 +413,10 @@ label = "Gaia Proliferates"
 "Fusion Propulsion" -> "Human Outer Solar System Grand Tour - Uranus / Neptune / Pluto"
 "Antimatter-Enriched Propellent Propulsion" -> "Human Outer Solar System Grand Tour - Uranus / Neptune / Pluto"
 
-{ rank = same; 2100; Large Scale Human Habitation of Mars" }
+{ rank = same; 2100; "Large Scale Human Habitation of Mars" }
 "Interstellar Precursors" -> "Human Interstellar Travel"
 "Human Outer Solar System Grand Tour - Uranus / Neptune / Pluto" -> "Human Interstellar Travel"
 "Nuclear-Pulsed Propulsion (Orion Concept)" -> "Human Interstellar Travel"
 "Fusion Propulsion" -> "Human Interstellar Travel"
 "Human Interstellar Travel" -> "Ad Astra"
+}
