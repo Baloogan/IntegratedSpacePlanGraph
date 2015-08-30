@@ -607,6 +607,7 @@ node [shape="box"];
 "Manned Interplanetary Spaceflight Begins"
 "Initiate Earth-Mars Cycling Spaceship Transportation System"
 "2nd Earth-Mars Cycling Spaceship / Mars Landing Goal"
+"Advanced Technology Venus Orbiting Space Station"
 }
 "Initiate Earth-Mars Cycling Spaceship Transportation System" -> 
 {
@@ -647,8 +648,17 @@ node [shape="box"];
 "C,H,O,N Extraction & Storage" ->
 {
 "Moonport / L1 Propellant Depot"
+"Initial Mars Base Established"
+"Propellant Depot"
+"Earth-Mars Solar Sail Xport System"
 }
-
+"Martian Proximity IDV" ->
+{
+"Phobos / Deimos Mining Operations Commence"
+"Mars-Mainbelt Mobility Vehicle"
+"Satellite Tether Xport"
+"Venus Proximity IDV"
+}
 
 { rank = same; 2023; "Phobos / Deimos Mining Operations Commence" }
 { rank = same; 2023; "Ion-Drive Engine Technology" }
@@ -667,7 +677,29 @@ node [shape="box"];
 "Tau 1000 A.U. Unmanned Probe"
 "Mars-Mainbelt Mobility Vehicle"
 }
-
+"Mars-Mainbelt Mobility Vehicle" ->
+{
+"Advanced Laser Comm Network"
+"Mainbelt Asteroid Exploration"
+"Earth-Mars Solar Sail Xport System"
+"Mainbelt Asteroid Orbit Change"
+}
+"Advanced Laser Comm Network" ->
+{
+"Martian Proximity IDV"
+"Mars-Mainbelt Mobility Vehicle"
+"Earth-Mars Solar Sail Xport System"
+"Venus Orbiting Comsats Deployed"
+"Attach MDRE"
+"Mainbelt Asteroid Exploration"
+"Martian Spaceport"
+"Operational Mars Base"
+}
+"Earth-Mars Solar Sail Xport System" ->
+{
+"Advanced Laser Comm Network"
+"Earth-Venus Solar Sail Cargo Xport System"
+}
 
 { rank = same; 2028; "Martian Spaceport" }
 { rank = same; 2028; "HEDM Chemical Propulsion" }
@@ -694,6 +726,83 @@ node [shape="box"];
 }
 "First Cycling Spaceship Return To Mars Initiate Martian Resource Exploitation" -> "Initiate Earth-Venus Cycling Space Ship Transportation System" 
 "Antimatter-Enriched Propellent Propulsion" -> "Human Outer Solar System Exploration Begins - Jupiter And Its Jovian Satellites"
+"First Manned Venus Flyby" ->
+{
+"Earth-Venus Solar Sail Cargo Xport System"
+"Venus Orbiting Comsats Deployed"
+}
+"Earth-Venus Solar Sail Cargo Xport System" ->
+{
+"Venus Orbiting Comsats Deployed"
+"Advanced Technology Venus Orbiting Space Station"
+}
+"Venus Orbiting Comsats Deployed" -> "Venus Orbiting Advanced Comm Network"
+"Advanced Technology Venus Orbiting Space Station" ->
+{
+"Venus Proximity IDV"
+"Venus Orbiting Solar Power Station"
+"Balloonborne Atmospheric Research"
+"Orbiting Environmental Observation Platforms"
+"Unmanned Scientific Surface Stations"
+}
+
+"Venus Proximity IDV" ->
+{
+"Propellant Depot" /* There are two propellant depots - one by Venus Proximity IDV and the other below C,H,O,N Extraction & Storage */
+"Diversion of Asteroidal Material To Venus"
+"Venus Orbiting Solar Power Station"
+"Orbiting Environmental Observation Platforms"
+"Giant Parasol Emplacement Or Initiate Atmospheric Microbiological Engineering Process"
+}
+"Propellant Depot" -> "Venus Proximity IDV"
+"Diversion of Asteroidal Material To Venus" ->
+{
+"Propellant Depot"
+"Resource Extraction"
+"Initiate Rotation Program"
+}
+"Venus Orbiting Solar Power Station" -> "Resource Extraction"
+"Resource Extraction" ->
+{
+"Advanced Technology Venus Orbiting Space Station"
+"Balloonborne Atmospheric Research"
+"Propellant Depot"
+}
+"Balloonborne Atmospheric Research" ->
+{
+"Venus Orbiting Advanced Comm Network"
+"Orbiting Environmental Observation Platforms"
+}
+"Venus Orbiting Advanced Comm Network" ->
+{
+"Orbiting Environmental Observation Platforms"
+"Giant Parasol Emplacement Or Initiate Atmospheric Microbiological Engineering Process"
+"Unmanned Scientific Surface Stations"
+"Unmanned Surface Rovers"
+}
+"Orbiting Environmental Observation Platforms" ->
+{
+"Venus Orbiting Advanced Comm Network"
+"Unmanned Scientific Surface Stations"
+"Giant Parasol Emplacement Or Initiate Atmospheric Microbiological Engineering Process"
+"Venus Terraforming Operations"
+}
+"Unmanned Scientific Surface Stations" ->
+{
+"Orbiting Environmental Observation Platforms"
+"Venus Orbiting Advanced Comm Network"
+"Unmanned Surface Rovers"
+"Giant Parasol Emplacement Or Initiate Atmospheric Microbiological Engineering Process"
+"Venus Terraforming Operations"
+}
+"Unmanned Surface Rovers" -> "Venus Terraforming Operations"
+
+{ rank = same; 2050; "Unmanned Surface Rovers" }
+{ rank = same; 2050; "Initiate Rotation Program" }
+"Initiate Rotation Program" -> "Venus Terraforming Operations"
+"Giant Parasol Emplacement Or Initiate Atmospheric Microbiological Engineering Process" -> "Venus Terraforming Operations"
+
+
 
 { rank = same; 2038; "Self-Supporting Mars Base" }
 { rank = same; 2038; "Antimatter-Enriched Propellent Propulsion" }
