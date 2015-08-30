@@ -245,6 +245,14 @@ node [shape="box"];
 {
 "Waste Dump"
 "GEO Cryogenic And Hypergolic Propellant Depot"
+"Industry / University Research Facilities"
+"LEO International Space University"
+"LEO Recreational Excursions"
+}
+"Industry / University Research Facilities" ->
+{
+"LEO International Space University"
+"LEO Recreational Excursions"
 }
 "GEO Cryogenic And Hypergolic Propellant Depot" ->
 {
@@ -252,6 +260,7 @@ node [shape="box"];
 "Piloted Lunar Transfer Capability - Lunar Piloted Vehicle"
 "Commercial Manned GEO Communications Platforms"
 "LLOX To LLO Lunar Propellant Tanker"
+"Moonport / L1 Propellant Depot"
 }
 
 "TDRS Constellation" -> "US / International Space Station Project"
@@ -282,7 +291,7 @@ node [shape="box"];
 "Man Tended GEO Comm Platforms"
 "GEO Cryogenic And Hypergolic Propellant Depot"
 "Commercial Manned GEO Communications Platforms"
-"Increased Capability POTV"
+"Increased Capacity POTV"
 }
 "Man Tended GEO Comm Platforms" -> "Commercial Manned GEO Communications Platforms"
 
@@ -290,8 +299,19 @@ node [shape="box"];
 {
 "Increased Capacity POTV"
 "HEO Industrial / SSPS Production Facilities"
+"Hemispherical Earth Facing Comm Coverage"
+}
+"Hemispherical Earth Facing Comm Coverage" ->
+{
+"Fiber-Optic Cable Manufacturing"
+"International Lunar Base"
+"LEO International Spaceport"
+"Moonport"
 }
 
+"International Lunar Base" -> "Hemispherical Earth Facing Comm Coverage"
+"LEO International Spaceport" -> "Hemispherical Earth Facing Comm Coverage"
+"Moonport" -> "Hemispherical Earth Facing Comm Coverage"
 
 "Aerobrake Capability" -> "Piloted Lunar Transfer Capability - Lunar Piloted Vehicle"
 "Piloted Lunar Transfer Capability - Lunar Piloted Vehicle" ->
@@ -310,7 +330,7 @@ node [shape="box"];
 "Output Enabling Equipment Evaluation"
 "Habitation And Research Modules"
 "In-Situ LLOX Pilot Production Unit"
-"Volume Intesive Pressurized Hanger Assembly Capability"
+"Volume Intensive Pressurized Hanger Assembly Capability"
 "LLOX Production & Cryo Storage Facility"
 "Ore Extraction And Regolith Processing"
 "Amorphous Cell And Support Structure Manufacturing"
@@ -322,12 +342,61 @@ node [shape="box"];
 "HEO Industrial / SSPS Production Facilities"
 "LOSF Propellant Storage Depot"
 }
-"LLOX Production & Cryo Storage Facility" -> "Commercial Manned GEO Communications Platforms"
+"Volume Intensive Pressurized Hanger Assembly Capability" ->
+{
+"Astronomical And Lunar Unique Science"
+"Fractional G Bio-Medical Research Lab"
+"Vivarium"
+"International Lunar Base"
+"LLOX Production & Cryo Storage Facility"
+"Ore Extraction And Regolith Processing"
+"Indigenous Resource Habitat Construction"
+"Amorphous Cell And Support Structure Manufacturing"
+"Fiber-Optic Cable Manufacturing"
+"He3 Export"
+"Lunar Tourism Market Emerges"
+"Advanced Life Support Research"
+"Agra-Complex"
+}
+"Advanced Life Support Research" ->
+{
+"Commercial Manned GEO Communications Platforms"
+"International Lunar Base"
+"LEO International Spaceport"
+"Moonport"
+"Martian Cycling Spaceship Element Integration"
+"L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spacepot"
+}
+
+"LLOX Production & Cryo Storage Facility" -> 
+{
+"Commercial Manned GEO Communications Platforms"
+"LEO International Spaceport"
+"GEO Cryogenic And Hypergolic Propellant Depot"
+"Moonport / L1 Propellant Depot"
+"LLOX To LLO Lunar Propellant Tanker"
+"HEO Industrial / SSPS Production Facilities"
+"Ore Extraction And Regolith Processing"
+}
+"Moonport" -> 
+{
+"Moonport / L1 Propellant Depot"
+"L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport"
+}
+"Moonport / L1 Propellant Depot" ->
+{
+"HEO Industrial / SSPS Production Facilities"
+"Martian Cycling Spaceship Launch"
+}
+
 "Ore Extraction And Regolith Processing" ->
 {
 "Commercial Manned GEO Communications Platforms"
+"LEO International Spaceport"
+"L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport"
+"Indigenous Resource Habitat Construction"
 }
-"Advanced Life Support Research" -> "Commercial Manned GEO Communications Platforms"
+"Indigenous Resource Habitat Construction" -> "Self-Supporting Lunar Base"
 "Increased Capacity POTV" ->
 {
 "L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport"
@@ -356,6 +425,12 @@ node [shape="box"];
 "Fiber-Optic Cable Manufacturing"
 "Amorphous Cell And Support Structure Manufacturing"
 "L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport"
+}
+
+"Fiber-Optic Cable Manufacturing" ->
+{
+"Secure Fiber-Optic Multibase Comm Network"
+"Self-Supporting Lunar Base"
 }
 
 "MOMV"->"Space Harboring / Servicing / Tending & LEO Propellant Depot"
@@ -500,7 +575,13 @@ node [shape="box"];
 "Integrated Mars Transfer Vehicle"
 "Martian Cycling Spaceship Element Integration"
 }
-"Integrated Mars Transfer Vehicle" -> "LEO Assembly"
+"Integrated Mars Transfer Vehicle" -> 
+{
+"LEO Assembly"
+"Mars Interplanetary Spaceflight Begins"
+"First Manned Mars Landing Expedition"
+}
+
 "LEO Assembly" -> "Martian Cycling Spaceship Element Integration"
 "Martian Cycling Spaceship Element Integration" -> "Transfer To L1"
 
@@ -537,16 +618,34 @@ node [shape="box"];
 "Manned Interplanetary Spaceflight Begins"
 "Initiate Earth-Mars Cycling Spaceship Transportation System"
 }
-"Integrated Mars Transfer Vehicle" -> "First Manned Mars Landing Expedition"
+"Manned Interplanetary Spaceflight Begins" ->
+{
+"First Manned Mars Landing Expedition"
+"Deploy Comm Network"
+"Station CELSS"
+"Phobos Outpost Established"
+}
+"Deploy Comm Network" -> 
+{
+"Advanced Laser Comm Network"
+"First Manned Mars Landing Expedition"
+}
+
+"Station CELSS" -> "Phobos Outpost Established"
 "2nd Earth-Mars Cycling Spaceship / Mars Landing Goal" ->
 {
 "First Manned Mars Landing Expedition"
 "First Cycling Spaceship Return To Mars Initiate Martian Resource Exploitation"
 }
+"First Manned Mars Landing Expedition" -> "Mars Landing - Human Output Established"
 "First Cycling Spaceship Return To Mars Initiate Martian Resource Exploitation" ->
 {
 "Martian Proximity IDV"
 "C,H,O,N Extraction & Storage"
+}
+"C,H,O,N Extraction & Storage" ->
+{
+"Moonport / L1 Propellant Depot"
 }
 
 
