@@ -254,6 +254,7 @@ node [shape="box"];
 "LEO International Space University"
 "LEO Recreational Excursions"
 }
+"LEO International Space University" -> "LEO Recreational Excursions"
 "GEO Cryogenic And Hypergolic Propellant Depot" ->
 {
 "Lunar Landing Elements - Lunar Personnel Lander And Lunar Cargo Lander"
