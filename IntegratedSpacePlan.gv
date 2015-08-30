@@ -18,9 +18,9 @@ node [shape="box"];
 "US / International Space Station Project" [penwidth=3, shape="doubleoctagon"]
 "US / International Space Station Project" ->"Lunar Orbit Staging / Facility" [penwidth=3, weight=100]
 "Lunar Orbit Staging / Facility" [penwidth=3,shape="doubleoctagon"]
-"Lunar Orbit Staging / Facility" -> "Return-to-Moon"  [penwidth=3, weight=100]
-"Return-to-Moon" 
-"Return-to-Moon" -> "Lunar Outpost Established"  [penwidth=3, weight=100]
+"Lunar Orbit Staging / Facility" -> "Return-To-Moon Core Sample Collection And Analysis"  [penwidth=3, weight=100]
+"Return-To-Moon Core Sample Collection And Analysis" 
+"Return-To-Moon Core Sample Collection And Analysis" -> "Lunar Outpost Established"  [penwidth=3, weight=100]
 "Lunar Outpost Established" 
 "Lunar Outpost Established" -> "International Lunar Base"  [penwidth=3, weight=100]
 "International Lunar Base"
@@ -366,7 +366,7 @@ node [shape="box"];
 "LEO International Spaceport"
 "Moonport"
 "Martian Cycling Spaceship Element Integration"
-"L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spacepot"
+"L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport"
 }
 
 "LLOX Production & Cryo Storage Facility" -> 
@@ -531,7 +531,7 @@ node [shape="box"];
 "Mars Network Mission" -> "Venus Sample Return Mission"
 "Lunar Electric Cargo Vehicle" -> 
 {
-"Lunar Output Established"
+"Lunar Outpost Established"
 "Nuclear Powered Electric Propulsion"
 }
 "Nuclear Powered Electric Propulsion" ->
@@ -639,7 +639,7 @@ node [shape="box"];
 "First Manned Mars Landing Expedition"
 "First Cycling Spaceship Return To Mars Initiate Martian Resource Exploitation"
 }
-"First Manned Mars Landing Expedition" -> "Mars Landing - Human Output Established"
+"First Manned Mars Landing Expedition" -> "Mars Landing - Human Outpost Established"
 "First Cycling Spaceship Return To Mars Initiate Martian Resource Exploitation" ->
 {
 "Martian Proximity IDV"
@@ -692,7 +692,7 @@ node [shape="box"];
 "Venus Orbiting Comsats Deployed"
 "Attach MDRE"
 "Mainbelt Asteroid Exploration"
-"Martian Spaceport"
+"Martian Spaceport Expanded Phobos Facility"
 "Operational Mars Base"
 }
 "Earth-Mars Solar Sail Xport System" ->
@@ -701,7 +701,6 @@ node [shape="box"];
 "Earth-Venus Solar Sail Cargo Xport System"
 }
 
-{ rank = same; 2028; "Martian Spaceport" }
 { rank = same; 2028; "HEDM Chemical Propulsion" }
 
 "L4 / L5 Initiate Earth-Moon Libration Point Habitat Construction"->"Expanding HEO Industrial Capability"
