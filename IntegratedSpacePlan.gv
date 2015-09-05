@@ -115,7 +115,6 @@ node [shape="box"];
 }
 
 
-"Evolvable OMV"->"MOMV" 
 "Evolvable OTV"->
 {
 "FTS"
@@ -125,6 +124,9 @@ node [shape="box"];
 {
 "2 Stage LEO-GEO-LEO STV Capability"
 "GEO MPE Biosphere Observation Platforms Deployed"
+"Remote Tended GEO"
+"Deep Space/Planetary Missions Deployment"
+"Commercial And Defense Sat Launches"
 }
 
 "Mission to Planet Earth - Element & Data Integration"->"US / International Space Station Project"
@@ -248,6 +250,9 @@ node [shape="box"];
 "Industry / University Research Facilities"
 "LEO International Space University"
 "LEO Recreational Excursions"
+"LEO Quarantine"
+"Lunar Orbit Staging / Facility"
+"Unmanned GEO Comm And ERT Platform Tending"
 }
 "Industry / University Research Facilities" ->
 {
@@ -279,7 +284,6 @@ node [shape="box"];
 "MOMV"
 }
 "Independent LEO Transportation Node And Fuel Depot" -> "Manned Space Transfer Vehicle"
-"Remote Tended GEO" -> "Independent LEO Transportation Node And Fuel Depot"
 "Manned Space Transfer Vehicle" -> 
 {
 "Man Tended GEO"
@@ -328,7 +332,7 @@ node [shape="box"];
 {
 "Mars Crew Sortie Vehicle"
 "LLOX To LLO Lunar Propellant Tanker"
-"Output Enabling Equipment Evaluation"
+"Outpost Enabling Equipment Evaluation"
 "Habitation And Research Modules"
 "In-Situ LLOX Pilot Production Unit"
 "Volume Intensive Pressurized Hanger Assembly Capability"
@@ -383,6 +387,7 @@ node [shape="box"];
 {
 "Moonport / L1 Propellant Depot"
 "L1 Earth-Moon Libration Point Interplanetary Arrival-Departure Spaceport"
+"Tethered Systems"
 }
 "Moonport / L1 Propellant Depot" ->
 {
@@ -533,6 +538,8 @@ node [shape="box"];
 {
 "Lunar Outpost Established"
 "Nuclear Powered Electric Propulsion"
+"Return-To-Moon Comnet Deployment"
+"Outpost Enabling Equipment Evaluation"
 }
 "Nuclear Powered Electric Propulsion" ->
 {
@@ -865,6 +872,102 @@ node [shape="box"];
 "L4 / L5 Island Two"
 "L4 / L5 Multiple Settlement Construction"
 "Independent Spacefaring Human Communities"
-
+"Small Martian Settlements Proliferate"
 }
+
+"Remote Tended GEO" ->
+{
+"Independent LEO Transportation Node And Fuel Depot"
+"Commercial And Defense Sat Launches"
+"Unmanned GEO Comm And ERT Platform Tending"
+}
+
+"Deep Space/Planetary Missions Deployment" -> "LEO Quarantine"
+"Unmanned GEO Comm And ERT Platform Tending" -> "Return-To-Moon Comnet Deployment"
+"Return-To-Moon Comnet Deployment" -> "Lunar Orbit Staging / Facility"
+"Outpost Enabling Equipment Evaluation" -> "Habitation And Research Modules"
+"Habitation And Research Modules" ->
+{
+"In-Situ LLOX Pilot Production Unit"
+"Fractional G Bio-Medical Research Lab"
+}
+"In-Situ LLOX Pilot Production Unit" -> "LLOX Production & Cryo Storage Facility"
+"Astronomical And Lunar Unique Science" -> "International Lunar Base"
+"Fractional G Bio-Medical Research Lab" ->
+{
+"Vivarium"
+"Advanced Life Support Research"
+}
+"Vivarium" ->
+{
+"Advanced Life Support Research"
+"Agra-Complex"
+}
+"Agra-Complex" -> "Green House / Food Production" -> "Self-Supporting Lunar Base"
+"Tethered Systems" -> 
+{
+"Satellite Tether Xport"
+"Moonport"
+}
+"Dust Braking" -> "Self-Supporting Lunar Base"
+"Fuel Factory" -> "C,H,O,N Extraction & Storage"
+"Surface Exploration" -> "Polar Region Exploration"
+"Propellant Depot" -> /* One of two */
+{
+"Martian Proximity IDV"
+"Mars-Mainbelt Mobility Vehicle"
+}
+"Satellite Tether Xport" ->
+{
+"Initial Mars Base Established"
+"Martian Spaceport Expanded Phobos Facility"
+}
+"Mainbelt Asteroid Exploration" -> "Attach MDRE"
+"Attach MDRE" ->
+{
+"Mainbelt Asteroid Orbit Change"
+"Relocate Deimos To Mars Synchronous Orbit"
+}
+"Mainbelt Asteroid Orbit Change" ->
+{
+"Create New Moons For Mars If Required"
+"Diversion Of Asteroidal Material To Venus"
+}
+"Operational Mars Base" ->
+{
+"LOX Production And Cryo Storage Facility"
+"Extended Exploration"
+"Global Transportation Capability"
+}
+"Lox Production And Cryo Storage Facility" -> "Carbon Monoxide Fuel Production And Storage"
+"Carbon Monoxide Fuel Production And Storage" ->
+{
+"Extended Exploration"
+"Global Transportation Capability"
+}
+"Extended Exploration" -> "Global Transportation Capability"
+"Global Transportation Capability" ->
+{
+"Self-Supporting Mars Base"
+"Initial Rotating Skyhook Experimentation"
+"Small Martian Settlements Proliferate"
+}
+"Create New Moons For Mars If Required" -> "Initiate Martian Terraforming Operations"
+"Relocate Deimos To Mars Synchronous Orbit" -> "Martian Orbiting Skyhook Complex"
+"Martian Orbiting Skyhook Complex" ->
+{
+"Stationary Martian Skyhook"
+"Initial Rotating Skyhook Experimentation"
+}
+"Initial Rotating Skyhook Experimentation" ->
+{
+"Small Martian Settlements Proliferate"
+"Stationary Martian Skyhook"
+}
+"Small Martian Settlements Proliferate" ->
+{
+"Stationary Martian Skyhook"
+"Large Scale Human Habitation Of Mars"
+}
+"Stationary Martian Skyhook" -> "Large Scale Human Habitation Of Mars"
 }
