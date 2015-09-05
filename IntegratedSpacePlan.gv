@@ -967,7 +967,7 @@ node [shape="box"];
 "Small Martian Settlements Proliferate" ->
 {
 "Stationary Martian Skyhook"
-"Large Scale Human Habitation Of Mars"
+"Large Scale Human Habitation of Mars"
 }
-"Stationary Martian Skyhook" -> "Large Scale Human Habitation Of Mars"
+"Stationary Martian Skyhook" -> "Large Scale Human Habitation of Mars"
 }
